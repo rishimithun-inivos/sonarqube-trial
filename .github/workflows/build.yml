@@ -13,8 +13,8 @@ jobs:
     steps:
       - name: Debugging Info
         run: |
-          echo "SONAR_HOST_URL: $SONAR_HOST_URL"
-          echo "SONAR_TOKEN: $SONAR_TOKEN"
+          echo "SONAR_HOST_URL: ${{ secrets.SONAR_HOST_URL }}"
+          echo "SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}"
       - uses: actions/checkout@v2
         with:
           fetch-depth: 0
